@@ -9,3 +9,6 @@ title: "Test for Publishing Quarto with Github Pages"
 - `_quarto.yml`에 프로젝트 렌더링에 관한 정보가 들어 있다. 
 - `.nojekyll` 파일은 Github Pages가 Jekyll을 사용하지 않도록 하는 파일이다. 반드시 생성하자. 
 
+# Github Pages 설정 
+
+
