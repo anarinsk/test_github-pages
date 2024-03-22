@@ -56,19 +56,19 @@ name: Quarto Publish
   
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 우분투 셋업 
     permissions:
       contents: write
       id-token: write
       pages: write
     steps:
-      - name: Check out repository
+      - name: Check out repository 
         uses: actions/checkout@v4
   
-      - name: Set up Quarto
+      - name: Set up Quarto # 쿼토 설치 
         uses: quarto-dev/quarto-actions/setup@v2
   
-      - name: Render and Publish
+      - name: Render and Publish # gh-pages 페이지를 렌더해서 발행한다. 
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
@@ -84,3 +84,7 @@ jobs:
 > - `with:` 액션스에 전달할 인자를 지정한다.
 > - `env:` 환경 변수를 지정한다.
 
+> [!NOTE - uses]
+> - `actions/checkout@v4`: 리포의 브랜치에 접근할 수 있게 해준다. 
+> - `quarto-dev/quarto-actions/setup@v2`: 쿼토를 설치한다.
+> - `quarto-dev/quarto-actions/publish@v2`: 쿼토를 이용해 페이지 렌더링 및 발행 작업을 수행한다. 
