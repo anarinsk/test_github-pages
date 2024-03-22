@@ -84,7 +84,7 @@ jobs:
 > - `with:` 액션스에 전달할 인자를 지정한다.
 > - `env:` 환경 변수를 지정한다.
 
-> [!NOTE - uses]
+> [!NOTE]
 > - `actions/checkout@v4`: 리포의 브랜치에 접근할 수 있게 해준다. 
 > - `quarto-dev/quarto-actions/setup@v2`: 쿼토를 설치한다.
 > - `quarto-dev/quarto-actions/publish@v2`: 쿼토를 이용해 페이지 렌더링 및 발행 작업을 수행한다. 
