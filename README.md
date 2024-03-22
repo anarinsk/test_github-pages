@@ -29,7 +29,7 @@ Actions를 쓰지 않는다면 위에 소개된 방법 중에서 main 브랜치 
 
 `.github/workflows` 내에 스크립트가 없었도 "pages build and deployment" 액션스가 자동으로 실행된다. 
 
-![](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png)
+![](/images/main.png)
 
 #### Actions로 쓰기 
 
@@ -88,3 +88,7 @@ jobs:
 > - `actions/checkout@v4`: 리포의 브랜치에 접근할 수 있게 해준다. 
 > - `quarto-dev/quarto-actions/setup@v2`: 쿼토를 설치한다.
 > - `quarto-dev/quarto-actions/publish@v2`: 쿼토를 이용해 페이지 렌더링 및 발행 작업을 수행한다. 
+
+Pages의 설정은 아래와 같이 둔다. 
+
+![](/images/actions.png)
