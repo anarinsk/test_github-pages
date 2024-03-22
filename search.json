@@ -11,13 +11,20 @@
     "href": "index.html",
     "title": "Test for Publishing Quarto with Github Pages",
     "section": "",
-    "text": "Quarto를 이용하여 프로젝트를 생성하고 문서를 작성한다.\n\n_quarto.yml에 프로젝트 렌더링에 관한 정보가 들어 있다.\n.nojekyll 파일은 Github Pages가 Jekyll을 사용하지 않도록 하는 파일이다. 반드시 생성하자."
+    "text": "이렇게 테스트를 하게 되는 것이었다…"
   },
   {
-    "objectID": "index.html#quarto-project-생성",
-    "href": "index.html#quarto-project-생성",
+    "objectID": "index.html#simply-testing",
+    "href": "index.html#simply-testing",
     "title": "Test for Publishing Quarto with Github Pages",
     "section": "",
-    "text": "Quarto를 이용하여 프로젝트를 생성하고 문서를 작성한다.\n\n_quarto.yml에 프로젝트 렌더링에 관한 정보가 들어 있다.\n.nojekyll 파일은 Github Pages가 Jekyll을 사용하지 않도록 하는 파일이다. 반드시 생성하자."
+    "text": "이렇게 테스트를 하게 되는 것이었다…"
+  },
+  {
+    "objectID": "index.html#한글-제목은-어떻게-나옵니까",
+    "href": "index.html#한글-제목은-어떻게-나옵니까",
+    "title": "Test for Publishing Quarto with Github Pages",
+    "section": "한글 제목은 어떻게 나옵니까?",
+    "text": "한글 제목은 어떻게 나옵니까?\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut dignissim, nibh at malesuada pharetra, lorem nisl suscipit turpis, eu tincidunt lectus est et lacus. Phasellus ligula tellus, ultricies eget ornare eu, mollis sit amet sapien. Cras commodo ac tortor eu blandit. Pellentesque in elit non nisl sagittis ultricies. Sed gravida odio eget nunc interdum pretium. Quisque id fermentum velit, ac facilisis est. Vestibulum lacinia justo eu enim mattis, sit amet facilisis ligula porttitor. Mauris ut pretium ex, sit amet dignissim massa. Morbi hendrerit velit at leo laoreet, suscipit elementum justo luctus. Sed in laoreet tellus, ac scelerisque nibh. Nam sollicitudin tempus massa sit amet ultricies.\nNam non finibus mi. Nulla ac purus rutrum risus accumsan ullamcorper nec eget mi. Nulla et arcu sapien. Nullam cursus cursus molestie. Sed vitae accumsan arcu, vitae luctus arcu. Suspendisse molestie turpis ac magna dictum aliquet. Vestibulum tincidunt neque metus, in laoreet magna scelerisque quis.\nNunc ullamcorper rhoncus nibh a auctor. Mauris eu risus fermentum, varius urna sit amet, viverra justo. Sed ac enim eget lorem tempor volutpat. Vivamus eget mi non ex porttitor dictum. Vivamus ut turpis malesuada, gravida enim a, maximus libero. In vel luctus mi, id pellentesque est. Cras felis sapien, semper non dui vitae, ornare interdum eros. Sed sit amet metus at lorem sodales faucibus."
   }
 ]
