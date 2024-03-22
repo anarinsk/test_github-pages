@@ -11,9 +11,76 @@
 /_site/
 /.pixi/
 ```
-## Github Pages 설정 
+## Github Pages 생성
 
-기본은 여기를 참고하자. 
+기본은 아래를 참고하자. 
 
+<https://quarto.org/docs/publishing/github-pages.html>
 
-`_quarto.yml` 파일에서 
+### 기본 원리 
+
+기본적으로 Quarto로 html 페이지를 모두 생성해서 해당 페이지를 github에 올리고 깃허브의 웹 서버를 통해서 페이지를 제공하는 것이다. 
+
+#### Actions 없이 쓰기 
+
+<https://quarto.org/docs/publishing/github-pages.html#render-to-docs>
+
+Actions를 쓰지 않는다면 위에 소개된 방법 중에서 main 브랜치 root 혹은 `docs` 폴더를 활용하는 방법이 좋다. Github Pages는 `docs` 폴더를 자동으로 인식하고, 푸시가 발생하면 퍼블리싱을 위한 절차를 개시한다. 
+
+`.github/workflows` 내에 스크립트가 없었도 "pages build and deployment" 액션스가 자동으로 실행된다. 
+
+![](https://quarto.org/docs/publishing/images/gh-pages-docs-dir.png)
+
+#### Actions로 쓰기 
+
+<https://quarto.org/docs/publishing/github-pages.html#github-action>
+
+- `_quarto.yml` 파일에서 별도의 아웃풋 폴더를 지정할 필요는 없다. 
+- 위의 설명에 나와 있듯이 로컬에서 반드시 아래 명령을 실행해야 한다. 
+
+```shell
+$ quarto publish gh-pages
+```
+
+로컬에 gh-pages가 생성되야 원격에도 생성된다. 이후부터 main에 내용을 반영한 렌더링과 퍼블리싱은 깃허브 액션스가 자동으로 처리한다. 
+
+이 리포의 `.github/workflows/publish.yml` 파일을 참고하자.
+
+```yml
+on:
+  workflow_dispatch:
+  push:
+    branches: main
+  
+name: Quarto Publish
+  
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      pages: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+  
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+  
+      - name: Render and Publish
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
+
+> [!NOTE] 
+> - `on:` 액션스 실행 조건을 나타낸다. 
+> - `build-deploy:` 실행 OS와 권한을 설정한다. 
+> - `steps:` 실행 단계를 나타낸다.
+> - `uses:` 사용할 액션스를 지정한다.
+> - `with:` 액션스에 전달할 인자를 지정한다.
+> - `env:` 환경 변수를 지정한다.
+
