@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "."
+  title: "Quarto + GitHub Pages"
   navbar:
     left:
       - href: index.qmd
@@ -12,7 +12,7 @@ website:
 
 format:
   html:
-    theme: [cosmo, anari-custom.scss]
+    theme: [yeti, anari-custom.scss]
     toc: true
     
 
