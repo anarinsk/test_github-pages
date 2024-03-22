@@ -29,7 +29,7 @@ Actions를 쓰지 않는다면 위에 소개된 방법 중에서 main 브랜치 
 
 `.github/workflows` 내에 스크립트가 없었도 "pages build and deployment" 액션스가 자동으로 실행된다. 
 
-<img src="/images/main.png" width=150>
+<img src="/images/main.png" width=400 border=2>
 
 #### Actions로 쓰기 
 
